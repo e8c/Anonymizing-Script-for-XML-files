@@ -4,7 +4,7 @@ Author: Emily Chou
 Description: Script to parse XML or CSV file and anonymize all names, emails, and urls.
              Solves collisions by replacing with ?FIRST? or ?LAST? + uniqNum of the collision
 
-Arguments: sys.argv[0] => this script (nameanon1.py)
+Arguments: sys.argv[0] => this script (anon.py)
            sys.argv[1] => xml or csv file with firstname, lastname, and email of all students (the infile)
                           Note: csv file should be formatted as firstname,lastname,email on separate rows 
            sys.argv[2] => anonymized version of ^ if xml file (the outfile)
@@ -25,7 +25,7 @@ from xml.etree import ElementTree as ET
 
 '''
 Dictionary with first and last name stored as one value
-script with replace these combinations first to reduce
+script will replace these combinations first to reduce
 numbers of collisions
 key = anoymized name
 value = original name
